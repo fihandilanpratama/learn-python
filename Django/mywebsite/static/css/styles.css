@@ -1,0 +1,13 @@
+.hero-section {
+  background-image: url("/static/img/banner-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  height: 400px;
+  margin-top: 40px;
+}
+body {
+  min-height: 2000px;
+}

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ judul }}</title>
+  <style>
+    .blog-banner {
+      width: 100%;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="blog-banner" src="{% static 'blog/img/banner-blog.jpg' %}" alt="">
+  <h1>{{ subjudul }} di {{ judul }}</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum in quam incidunt pariatur beatae enim minus deleniti quia laudantium? Nesciunt sed nobis illo. Possimus quibusdam nisi necessitatibus dolores ea sit placeat ad blanditiis aliquid et. Explicabo asperiores dolore maxime aliquid tempore est, officia deserunt. Minus illum nemo inventore non!</p>
+
+  <ul>
+    {% for link, name in nav %}
+      <li>
+        <a href="{{ link }}">{{ name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</body>
+</html>

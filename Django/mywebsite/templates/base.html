@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Bootstrap CSS -->
+    {% include "snippets/styles.html" %}
+
+    {% block app_css %}
+    {% endblock app_css %}
+
+    <title>{{ judul }}</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    {% include "snippets/navbar.html" %}
+    <!-- end navbar -->
+
+    <!-- hero -->
+    <div class="hero-section px-4 py-5 text-center bg-success">
+      {% block header %}
+      {% endblock header %}
+    </div>
+    <!-- end hero -->
+
+    <div class="container">
+      {% block main %}
+      {% endblock main %}
+    </div>
+
+    {% include "snippets/scripts.html" %}
+  </body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app_css %}
+  <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+{% endblock app_css %}
+
+{% block header %}
+  <h1 class="display-5 fw-bold">Selamat Datang di {{judul}}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead fw-bold mb-4">ini adalah halaman {{subjudul}} dari {{judul}}</p>
+      <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+      </div> -->
+    </div>
+{% endblock header %}
+
+{% block main %}
+    <h2 class="mt-1 mb-1">Recent Posts</h2>
+  {% for post in posts %}
+      <div class="row mt-2 mb-2">
+        <div class="card bg-secondary text-light">
+          <div class="card-header">
+            <h4>{{post.title}}</h4>
+          </div>
+          <div class="card-body">
+            {{post.body}}
+          </div>
+          <div class="card-footer">
+            ini adalah card footer
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+{% endblock main %}
